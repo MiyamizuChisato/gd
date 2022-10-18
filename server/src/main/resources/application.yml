@@ -1,0 +1,55 @@
+token-secret: ao1sakura
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+spring:
+  application:
+    name: recruit-server
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: miya
+    password: ao1sakura
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    druid:
+      username: root
+      password: ao1sakura
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/boss?serverTimezone=Asia/Shanghai&useUnicode=true
+  mail:
+    host: smtp.163.com
+    default-encoding: UTF-8
+    protocol: smtp
+    username: miyamizuchisato@163.com
+    password: KXKBXFYQJZDSDVBM
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          port: ${spring.mail.port}
+          auth: true
+          starttls:
+            enable: true
+            required: tru
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto

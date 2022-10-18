@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    font-weight: 400;
+}
+
+:root {
+    --c-bg: #f4f4f4ff;
+    --c-strong: rgba(0, 0, 0, 0.87);
+    --c-container: #ffffffff;
+    --c-header: rgba(255, 255, 255, 0.7);
+    --c-normal: #4c4e4dff;
+    --c-secondary: rgba(0, 0, 0, 0.6);
+    --c-scrollbar: #bfbfbfaa;
+    --c-scrollbar-hover: #bfbfbfff;
+    --c-bg-selected: rgba(0, 0, 0, 0.1);
+    --c-primary: #1a73e8ff;
+    --c-success: #81c995ff;
+    --c-warning: #fdd663ff;
+    --c-danger: #ee675cff;
+}
+
+
+html.dark {
+    --c-strong: #ffffffff;
+    --c-normal: #ddddddff;
+    --c-header: rgba(50, 50, 50, 0.7);
+    --c-bg: #171d20ff;
+    --c-secondary: rgba(255, 255, 255, 0.7);
+    --c-container: #2f3133ff;
+    --c-scrollbar-hover: #3e3f4bff;
+    --c-scrollbar: #3e3f4baa;
+    --c-bg-selected: rgba(255, 255, 255, 0.1);
+    --c-primary: #1a73e899;
+    --c-success: #81c99599;
+    --c-warning: #fdd66399;
+    --c-danger: #ee675c99;
+}
+
+html,
+body {
+    background-color: var(--c-bg);
+    font-family: "Helvetica Neue", "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.v-field--error:not(.v-field--disabled) .v-field__outline,
+.v-field--error:not(.v-field--disabled) .v-label.v-field-label,
+.v-input--error:not(.v-input--disabled) .v-input__details .v-messages .v-messages__message {
+    color: var(--c-danger) !important;
+}
+
+#nprogress .bar {
+    background: linear-gradient(135deg, #69FF97 10%, #00E4FF 100%) !important;
+    z-index: 9999999 !important;
+}
+
+#nprogress .spinner-icon {
+    border-left-color: #69FF97 !important;
+    border-bottom: #00E4FF !important;
+    z-index: 9999999 !important;
+}
+
+.el-notification.right {
+    z-index: 9999 !important;
+    background: var(--c-container);
+    border-color: var(--c-container);
+}
+
+.el-notification__content {
+    color: var(--c-normal) !important;
+}
+
+.el-notification__title {
+    color: var(--c-strong) !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+    background: var(--c-bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--c-scrollbar);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--c-scrollbar-hover);
+}

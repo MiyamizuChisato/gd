@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            color: #1460da;
+            font-size: 3rem;
+        }
+
+        .label {
+            font-size: 2.5rem;
+            color: #5f5f5fcc;
+        }
+
+        .tips {
+            font-size: 1.5rem;
+            color: #8f8f8fcc;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        .resume {
+            margin-top: 20px;
+        }
+
+        .btn {
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #1460da;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="title">招聘</div>
+    <div class="label">你收到了新的简历</div>
+    <div class="tips">
+        你发布的: <span class="bold" th:text="${company}"></span>
+        -
+        <span class="bold" th:text="${title}"></span>
+        收到了新的简历！
+    </div>
+    <a class="btn" th:href="${resume}">下载简历</a>
+</div>
+</body>
+
+</html>

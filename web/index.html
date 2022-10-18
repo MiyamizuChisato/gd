@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <script>
+        localStorage.getItem('theme') === 'dark' ? document.documentElement.classList.add('dark') : ''
+    </script>
+    <meta charset='UTF-8' />
+    <link rel='icon' type='image/svg+xml' href='/vite.svg' />
+    <link rel='stylesheet' href='./src/assets/style/loading.css'>
+    <link rel='stylesheet' href='./src/assets/style/main.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Vite + Vue + TS</title>
+</head>
+<body>
+<div id='app'>
+    <div class='loading' h='screen' w='screen' display='flex' justify='center' items='center'
+         bg='screen-light dark:screen-dark'>
+        <div class='large'>
+            <div class='medium'>
+                <div class='small'>
+                    <div class='dot'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='module' src='/src/main.ts'></script>
+</body>
+</html>

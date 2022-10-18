@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            color: #1460da;
+            font-size: 3rem;
+        }
+
+        .label {
+            font-size: 2.5rem;
+            color: #5f5f5fcc;
+        }
+
+        .tips {
+            font-size: 1.5rem;
+            color: #8f8f8fcc;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="title">招聘</div>
+    <div class="label">你的简历通过了</div>
+    <div class="tips">
+        恭喜！你投递给: <span class="bold" th:text="${company}"></span>
+        的职位
+        <span class="bold" th:text="${title}"></span>
+        通过了简历筛选,请通过聊天确认面试的方式吧
+    </div>
+</div>
+</body>
+
+</html>

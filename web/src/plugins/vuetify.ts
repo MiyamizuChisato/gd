@@ -1,0 +1,26 @@
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+
+export const vuetify = createVuetify({
+    components,
+    directives,
+    icons: {
+        defaultSet: 'mdi',
+        aliases,
+        sets: {
+            mdi
+        }
+    },
+    display: {
+        mobileBreakpoint: 'sm',
+        thresholds: {
+            xs: 576,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280
+        }
+    }
+})
